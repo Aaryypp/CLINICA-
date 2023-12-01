@@ -12,15 +12,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 
 @Entity
-@Table(name="provincia")
+@Table(name="provincia", uniqueConstraints = {@UniqueConstraint(columnNames = {"id_provincia"})})
 public class Provincia implements Serializable {
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -62,24 +59,5 @@ public class Provincia implements Serializable {
 	public void setCantones(List<Canton> cantones) {
 		this.cantones = cantones;
 	}
-    
-    
-    
-    
-	
-    
-    
-    
-    
-	
-    
-    
-    
-    
-    
-    
-   
-    
-	
 
 }
