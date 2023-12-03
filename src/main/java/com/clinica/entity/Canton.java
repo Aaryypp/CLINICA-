@@ -21,7 +21,14 @@ public class Canton  implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_canton;
 	private Long nombre_canton;
+	private Long id_provincia;
 	
+	public Long getId_provincia() {
+		return id_provincia;
+	}
+	public void setId_provincia(Long id_provincia) {
+		this.id_provincia = id_provincia;
+	}
 	public Long getId_canton() {
 		return id_canton;
 	}
