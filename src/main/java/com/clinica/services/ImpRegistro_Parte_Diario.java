@@ -6,14 +6,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.clinica.dao.IRegistro_Parte_DiarioDAO;
+import com.clinica.dao.DaoRegistro_Parte_Diario;
 import com.clinica.entity.Registro_Parte_Diario;
 
 @Service
-public class Registro_Parte_DiarioImpl implements IRegistro_Parte_DiarioService{
+public class ImpRegistro_Parte_Diario implements SerRegistro_Parte_Diario{
 
 	@Autowired
-	private IRegistro_Parte_DiarioDAO dao;
+	private DaoRegistro_Parte_Diario dao;
 	
 	@Override
 	@Transactional(readOnly = true)

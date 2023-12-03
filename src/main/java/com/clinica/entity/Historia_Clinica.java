@@ -34,10 +34,12 @@ public class Historia_Clinica implements Serializable{
 	@JoinColumn(name="cedula")
 	private List<Registro_Parte_Diario> registros_parte_diario;
 	
-	@PrePersist
+	/*
+	 * @PrePersist
 	public void prePersist() {
 		fecha_nacimiento = new Date();
 	}
+	 */
 
 	public String getCedula() {
 		return cedula;

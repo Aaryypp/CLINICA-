@@ -5,14 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.clinica.dao.IUnidad_OperativaDAO;
+import com.clinica.dao.DaoUnidad_Operativa;
 import com.clinica.entity.Unidad_Operativa;
 
 @Service
-public class Unidad_OperativaServiceImpl implements IUnidad_OperativaService{
+public class ImpUnidad_Operativa implements SerUnidad_Operativa{
 
 	@Autowired
-	private IUnidad_OperativaDAO dao;
+	private DaoUnidad_Operativa dao;
 	
 	@Override
 	@Transactional(readOnly=true)

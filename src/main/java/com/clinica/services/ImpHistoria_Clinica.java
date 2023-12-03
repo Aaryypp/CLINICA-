@@ -6,15 +6,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.clinica.dao.IHistoria_ClinicaDAO;
+import com.clinica.dao.DaoHistoria_Clinica;
 import com.clinica.entity.Historia_Clinica;
 
 
 @Service
-public class Historia_ClinicaServiceImpl implements IHistoria_ClinicaService  {
+public class ImpHistoria_Clinica implements SerHistoria_Clinica  {
 	
 	@Autowired
-	private IHistoria_ClinicaDAO dao;
+	private DaoHistoria_Clinica dao;
 
 	@Override
 	@Transactional(readOnly = true)
