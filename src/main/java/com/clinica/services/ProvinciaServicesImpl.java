@@ -21,5 +21,11 @@ public class ProvinciaServicesImpl implements IProvinciaServices{
 	public List<Provincia> findAll() {
 		return (List<Provincia>) ProvinciaDAO.findAll();
 	}
+	
+	@Transactional (readOnly = true)
+	@Override
+	public Provincia findById(Long id) {
+		return ProvinciaDAO.findById(id).orElse(null);
+	}
 
 }

@@ -6,4 +6,5 @@ import com.clinica.entity.Provincia;
 public interface IProvinciaServices {
 	
 	public List<Provincia> findAll();
+	public Provincia findById(Long id);
 }
