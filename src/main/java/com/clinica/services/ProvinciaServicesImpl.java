@@ -13,19 +13,31 @@ import com.clinica.entity.Provincia;
 @Service
 public class ProvinciaServicesImpl implements IProvinciaServices{
 	
-    @Autowired
+	   
+	@Autowired
     private IProvinciaDAO ProvinciaDAO;
     
+	
 	@Override
 	@Transactional(readOnly=true)
 	public List<Provincia> findAll() {
 		return (List<Provincia>) ProvinciaDAO.findAll();
 	}
-	
-	@Transactional (readOnly = true)
 	@Override
-	public Provincia findById(Long id) {
-		return ProvinciaDAO.findById(id).orElse(null);
+	@Transactional
+	public Provincia save(Provincia provincia) {
+		return ProvinciaDAO.save(provincia);
+	}
+	@Override
+	@Transactional(readOnly=true)
+	public Provincia findById(Long id_povincia) {
+		return ProvinciaDAO.findById(id_povincia).orElse(null);
+	}
+	@Override
+	@Transactional
+	public void delete(Long id_povincia) {
+		ProvinciaDAO.deleteById(id_povincia);
+		
 	}
 
 }
