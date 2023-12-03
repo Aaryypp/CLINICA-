@@ -50,14 +50,4 @@ public class Provincia implements Serializable {
 		this.nombre_provincia = nombre_provincia;
 	}
 
-
-	public List<Canton> getCantones() {
-		return cantones;
-	}
-
-
-	public void setCantones(List<Canton> cantones) {
-		this.cantones = cantones;
-	}
-
 }
