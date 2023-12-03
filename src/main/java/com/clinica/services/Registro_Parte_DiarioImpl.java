@@ -23,7 +23,7 @@ public class Registro_Parte_DiarioImpl implements IRegistro_Parte_DiarioService{
 
 	@Override
 	@Transactional(readOnly = true)
-	public Registro_Parte_Diario finfById(Long id) {
+	public Registro_Parte_Diario findById(Long id) {
 		return dao.findById(id).orElse(null);	}
 
 	@Override
