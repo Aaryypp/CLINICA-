@@ -46,6 +46,7 @@ public class CtrlCanton {
 	public Canton update(@RequestBody Canton canton, @PathVariable Long id_canton) {
 		Canton cantonActual = ser.findById(id_canton);
 		cantonActual.setNombre_canton(canton.getNombre_canton());
+		cantonActual.setId_provincia(canton.getId_provincia());
 		return ser.save(cantonActual);
 
 	}

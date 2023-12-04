@@ -44,6 +44,7 @@ public class CtrlParroquia {
 	public Parroquia update(@RequestBody Parroquia parroquia, @PathVariable Long id_parroquia) {
 		Parroquia parroquiaActual = ser.findById(id_parroquia);
 		parroquiaActual.setNombre_parroquia(parroquia.getNombre_parroquia());
+		parroquiaActual.setId_canton(parroquia.getId_canton());
 		return ser.save(parroquiaActual);
 
 	}

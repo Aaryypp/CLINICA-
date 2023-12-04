@@ -23,10 +23,11 @@ public class Registro_Parte_Diario implements Serializable{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id_parte_diario;
-	@Column(length=10)
+	@Column(length=10, nullable = false)
 	private String cedula;
 	@Temporal(TemporalType.DATE)
 	private Date fecha_registro;
+	@Column(nullable = false)
 	private Long codigo;
 	private Long numero_visita;
 	private double peso_paciente;

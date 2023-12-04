@@ -25,7 +25,6 @@ public class Provincia implements Serializable {
 	private Long id_provincia;
     private String nombre_provincia;
     
-    
     @OneToMany(fetch =FetchType.LAZY, cascade=CascadeType.ALL)
     @JoinColumn(name="id_provincia")
     private List<Canton> cantones;

@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,7 @@ public class CtrlRegistro_Parte_Diario {
 		return ser.findById(id);
 	}
 	
-	@PutMapping("/registro_parte_diario")
+	@PostMapping("/registro_parte_diario")
 	@ResponseStatus(HttpStatus.CREATED)
 	public Registro_Parte_Diario crear(@RequestBody Registro_Parte_Diario body) {
 		return ser.save(body);

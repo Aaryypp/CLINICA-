@@ -43,6 +43,7 @@ public class CtrlArea {
 	public Area update(@RequestBody Area area, @PathVariable Long id_area) {
 		Area areaActual = ser.findById(id_area);
 		areaActual.setNombre_area(area.getNombre_area());
+		areaActual.setId_parroquia(area.getId_parroquia());
 		return ser.save(areaActual);
 
 	}
