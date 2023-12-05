@@ -63,5 +63,4 @@ public class Canton  implements Serializable{
 	public void setParroquias(List<Parroquia> parroquias) {
 		this.parroquias = parroquias;
 	}
-	
 }

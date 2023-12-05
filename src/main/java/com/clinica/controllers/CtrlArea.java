@@ -22,7 +22,7 @@ import com.clinica.services.SerArea;
 public class CtrlArea {
 	@Autowired
 	private SerArea ser;
-	// listarareas
+	//listarareas
 	@GetMapping("/areas")
 	public List<Area> index() {
 		return ser.findAll();
